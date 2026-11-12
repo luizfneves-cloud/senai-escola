@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento | SENAI Votuporanga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="pagina-agendamento">
+
+  <!-- CABEÇALHO -->
+  <header id="topo" class="cabecalho">
+    <a href="index.html" class="logo">SENAI <span class="logo__destaque">Votuporanga</span></a>
+    <nav id="menu-principal" class="menu">
+      <ul class="menu__lista">
+        <li class="menu__item"><a href="index.html" class="menu__link">Início</a></li>
+        <li class="menu__item"><a href="catalogo.html" class="menu__link">Cursos</a></li>
+        <li class="menu__item"><a href="agendamento.html" class="menu__link menu__link--ativo">Agendamento</a></li>
+        <li class="menu__item"><a href="contato.html" class="menu__link">Contato</a></li>
+      </ul>
+    </nav>
+    <a href="agendamento.html" class="botao botao--principal cabecalho__botao">Agendar visita</a>
+  </header>
+
+  <main id="conteudo-principal">
+
+    <!-- SEÇÃO 1: AGENDA DA SEMANA -->
+    <section id="agenda-semana" class="secao">
+      <p class="chamada">Agenda da semana</p>
+      <h1 class="titulo-principal">Escolha seu horário</h1>
+      <p class="secao__descricao">Horários em destaque estão livres. Clique para reservar e depois preencha o formulário.</p>
+
+      <div class="agenda">
+        <table id="tabela-agenda" class="agenda__tabela">
+          <thead>
+            <tr class="agenda__linha">
+              <th class="agenda__cabecalho">Horário</th>
+              <th class="agenda__cabecalho">Seg</th>
+              <th class="agenda__cabecalho">Ter</th>
+              <th class="agenda__cabecalho">Qua</th>
+              <th class="agenda__cabecalho">Qui</th>
+              <th class="agenda__cabecalho">Sex</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="agenda__linha">
+              <th class="agenda__hora">09:00</th>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--livre">Livre</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--ocupado" disabled>Ocupado</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--livre">Livre</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--ocupado" disabled>Ocupado</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--livre">Livre</button></td>
+            </tr>
+            <tr class="agenda__linha">
+              <th class="agenda__hora">11:00</th>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--ocupado" disabled>Ocupado</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--livre">Livre</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--livre">Livre</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--livre">Livre</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--ocupado" disabled>Ocupado</button></td>
+            </tr>
+            <tr class="agenda__linha">
+              <th class="agenda__hora">14:00</th>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--livre">Livre</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--livre">Livre</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--ocupado" disabled>Ocupado</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--ocupado" disabled>Ocupado</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--livre">Livre</button></td>
+            </tr>
+            <tr class="agenda__linha">
+              <th class="agenda__hora">16:00</th>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--livre">Livre</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--ocupado" disabled>Ocupado</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--livre">Livre</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--livre">Livre</button></td>
+              <td class="agenda__celula"><button type="button" class="agenda__botao agenda__botao--livre">Livre</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: FORMULÁRIO -->
+    <section id="formulario-visita" class="secao secao--clara">
+      <p class="chamada">Visita e tour</p>
+      <h2 class="titulo-secao">Agende sua visita</h2>
+      <p class="secao__descricao">Conheça a escola, os laboratórios e converse com os professores.</p>
+
+      <form id="form-agendamento" class="formulario" action="#" method="post">
+
+        <fieldset class="formulario__grupo">
+          <legend class="formulario__legenda">Seus dados</legend>
+          <div class="formulario__campo">
+            <label for="nome" class="formulario__rotulo">Nome completo</label>
+            <input type="text" id="nome" name="nome" class="formulario__entrada" placeholder="Seu nome" required>
+          </div>
+          <div class="formulario__campo">
+            <label for="email" class="formulario__rotulo">E-mail</label>
+            <input type="email" id="email" name="email" class="formulario__entrada" placeholder="voce@email.com" required>
+          </div>
+          <div class="formulario__campo">
+            <label for="telefone" class="formulario__rotulo">Telefone / WhatsApp</label>
+            <input type="tel" id="telefone" name="telefone" class="formulario__entrada" placeholder="(17) 99999-0000" required>
+          </div>
+        </fieldset>
+
+        <fieldset class="formulario__grupo">
+          <legend class="formulario__legenda">Sobre a visita</legend>
+          <div class="formulario__campo">
+            <label for="tipo-visita" class="formulario__rotulo">Tipo de visita</label>
+            <select id="tipo-visita" name="tipo-visita" class="formulario__entrada" required>
+              <option value="">Selecione...</option>
+              <option value="visita-escola">Visita à escola</option>
+              <option value="tour-laboratorios">Tour pelos laboratórios</option>
+              <option value="conversa-curso">Conversa sobre um curso</option>
+            </select>
+          </div>
+          <div class="formulario__campo">
+            <label for="curso" class="formulario__rotulo">Curso de interesse</label>
+            <select id="curso" name="curso" class="formulario__entrada">
+              <option value="">Ainda não sei</option>
+              <option value="artistico">Artístico</option>
+              <option value="iot">TI 2.0 - IoT</option>
+              <option value="ti">TI</option>
+            </select>
+          </div>
+          <div class="formulario__campo">
+            <label for="data" class="formulario__rotulo">Data</label>
+            <input type="date" id="data" name="data" class="formulario__entrada" required>
+          </div>
+          <div class="formulario__campo">
+            <label for="horario" class="formulario__rotulo">Horário</label>
+            <select id="horario" name="horario" class="formulario__entrada" required>
+              <option value="">Selecione...</option>
+              <option value="09:00">09:00</option>
+              <option value="11:00">11:00</option>
+              <option value="14:00">14:00</option>
+              <option value="16:00">16:00</option>
+            </select>
+          </div>
+          <div class="formulario__campo">
+            <label for="pessoas" class="formulario__rotulo">Número de pessoas</label>
+            <input type="number" id="pessoas" name="pessoas" class="formulario__entrada" min="1" max="30" value="1">
+          </div>
+          <div class="formulario__campo formulario__campo--largo">
+            <label for="observacoes" class="formulario__rotulo">Observações</label>
+            <textarea id="observacoes" name="observacoes" class="formulario__entrada" rows="4" placeholder="Alguma dúvida ou necessidade?"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="formulario__campo formulario__campo--check">
+          <input type="checkbox" id="aceite" name="aceite" required>
+          <label for="aceite" class="formulario__rotulo">Concordo em ser contatado(a) sobre a visita.</label>
+        </div>
+
+        <button type="submit" id="botao-agendar" class="botao botao--principal">Confirmar agendamento</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer id="rodape" class="rodape">
+    <div class="rodape__bloco">
+      <p class="rodape__titulo">SENAI Votuporanga</p>
+      <p class="rodape__texto">Rua Olga Loti Camargo, 3500 - Jardim Santos Dumont</p>
+      <p class="rodape__texto">CEP 15501-280 - Votuporanga/SP</p>
+      <p class="rodape__texto">Telefone: (17) 3426-8210</p>
+    </div>
+    <div class="rodape__bloco">
+      <p class="rodape__titulo">Navegação</p>
+      <a href="index.html" class="rodape__link">Início</a>
+      <a href="catalogo.html" class="rodape__link">Cursos</a>
+      <a href="agendamento.html" class="rodape__link">Agendamento</a>
+      <a href="contato.html" class="rodape__link">Contato</a>
+    </div>
+    <p class="rodape__direitos">Projeto escolar de estudo em HTML e CSS. Não é o site oficial do SENAI.</p>
+  </footer>
+
+</body>
+</html>

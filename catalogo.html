@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos | SENAI Votuporanga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="pagina-catalogo">
+
+  <!-- CABEÇALHO -->
+  <header id="topo" class="cabecalho">
+    <a href="index.html" class="logo">SENAI <span class="logo__destaque">Votuporanga</span></a>
+    <nav id="menu-principal" class="menu">
+      <ul class="menu__lista">
+        <li class="menu__item"><a href="index.html" class="menu__link">Início</a></li>
+        <li class="menu__item"><a href="catalogo.html" class="menu__link menu__link--ativo">Cursos</a></li>
+        <li class="menu__item"><a href="agendamento.html" class="menu__link">Agendamento</a></li>
+        <li class="menu__item"><a href="contato.html" class="menu__link">Contato</a></li>
+      </ul>
+    </nav>
+    <a href="agendamento.html" class="botao botao--principal cabecalho__botao">Agendar visita</a>
+  </header>
+
+  <main id="conteudo-principal">
+
+    <!-- SEÇÃO 1: APRESENTAÇÃO -->
+    <section id="intro-catalogo" class="secao">
+      <p class="chamada">Catálogo</p>
+      <h1 class="titulo-principal">Cursos e professores</h1>
+      <p class="secao__descricao">Conheça os cursos da escola e os profissionais que conduzem cada um deles.</p>
+    </section>
+
+    <!-- SEÇÃO 2: CURSOS -->
+    <section id="cursos" class="secao secao--clara">
+      <p class="chamada">Formação</p>
+      <h2 class="titulo-secao">Nossos cursos</h2>
+      <div class="cartoes">
+
+        <article id="curso-artistico" class="cartao cartao--curso">
+          <img src="img/curso-artistico.jpg" alt="Estudante em aula de arte" class="cartao__imagem">
+          <h3 class="cartao__titulo">Artístico</h3>
+          <p class="cartao__texto">Desenvolve criatividade, desenho e design, com foco em projetos visuais e comunicação.</p>
+          <ul class="cartao__detalhes">
+            <li class="cartao__detalhe">Professor: Paixão</li>
+            <li class="cartao__detalhe">Aulas práticas</li>
+          </ul>
+          <a href="agendamento.html" class="botao botao--contorno">Quero conhecer</a>
+        </article>
+
+        <article id="curso-iot" class="cartao cartao--curso">
+          <img src="img/curso-iot.jpg" alt="Placa eletrônica com sensores" class="cartao__imagem">
+          <h3 class="cartao__titulo">TI 2.0 - IoT</h3>
+          <p class="cartao__texto">Internet das Coisas: sensores, microcontroladores e automação de objetos conectados.</p>
+          <ul class="cartao__detalhes">
+            <li class="cartao__detalhe">Professor: Mauricio Daniel</li>
+            <li class="cartao__detalhe">Laboratório de eletrônica</li>
+          </ul>
+          <a href="agendamento.html" class="botao botao--contorno">Quero conhecer</a>
+        </article>
+
+        <article id="curso-ti" class="cartao cartao--curso">
+          <img src="img/curso-ti.jpg" alt="Estudantes programando em computadores" class="cartao__imagem">
+          <h3 class="cartao__titulo">TI</h3>
+          <p class="cartao__texto">Programação, desenvolvimento web, redes e suporte técnico para o mercado.</p>
+          <ul class="cartao__detalhes">
+            <li class="cartao__detalhe">Professor: Renan</li>
+            <li class="cartao__detalhe">Laboratório de informática</li>
+          </ul>
+          <a href="agendamento.html" class="botao botao--contorno">Quero conhecer</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: PROFESSORES -->
+    <section id="professores" class="secao">
+      <p class="chamada">Quem cuida de você</p>
+      <h2 class="titulo-secao">Nossos professores</h2>
+      <p class="secao__descricao">Profissionais com experiência prática para ensinar o que o mercado pede.</p>
+      <div class="cartoes">
+
+        <article class="cartao cartao--professor">
+          <img src="img/prof-paixao.jpg" alt="Professor Paixão" class="cartao__imagem cartao__imagem--retrato">
+          <h3 class="cartao__titulo">Paixão</h3>
+          <p class="cartao__funcao">Curso Artístico</p>
+          <p class="cartao__texto">Conduz as turmas de arte e design, incentivando a criatividade.</p>
+        </article>
+
+        <article class="cartao cartao--professor">
+          <img src="img/prof-renan.jpg" alt="Professor Renan" class="cartao__imagem cartao__imagem--retrato">
+          <h3 class="cartao__titulo">Renan</h3>
+          <p class="cartao__funcao">Curso de TI</p>
+          <p class="cartao__texto">Ensina programação e desenvolvimento web com muita prática.</p>
+        </article>
+
+        <article class="cartao cartao--professor">
+          <img src="img/prof-mauricio.jpg" alt="Professor Mauricio Daniel" class="cartao__imagem cartao__imagem--retrato">
+          <h3 class="cartao__titulo">Mauricio Daniel</h3>
+          <p class="cartao__funcao">Curso TI 2.0 - IoT</p>
+          <p class="cartao__texto">Orienta projetos de automação e objetos conectados.</p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer id="rodape" class="rodape">
+    <div class="rodape__bloco">
+      <p class="rodape__titulo">SENAI Votuporanga</p>
+      <p class="rodape__texto">Rua Olga Loti Camargo, 3500 - Jardim Santos Dumont</p>
+      <p class="rodape__texto">CEP 15501-280 - Votuporanga/SP</p>
+      <p class="rodape__texto">Telefone: (17) 3426-8210</p>
+    </div>
+    <div class="rodape__bloco">
+      <p class="rodape__titulo">Navegação</p>
+      <a href="index.html" class="rodape__link">Início</a>
+      <a href="catalogo.html" class="rodape__link">Cursos</a>
+      <a href="agendamento.html" class="rodape__link">Agendamento</a>
+      <a href="contato.html" class="rodape__link">Contato</a>
+    </div>
+    <p class="rodape__direitos">Projeto escolar de estudo em HTML e CSS. Não é o site oficial do SENAI.</p>
+  </footer>
+
+</body>
+</html>

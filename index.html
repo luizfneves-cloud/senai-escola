@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início | SENAI Votuporanga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="pagina-inicio">
+
+  <!-- CABEÇALHO -->
+  <header id="topo" class="cabecalho">
+    <a href="index.html" class="logo">SENAI <span class="logo__destaque">Votuporanga</span></a>
+    <nav id="menu-principal" class="menu">
+      <ul class="menu__lista">
+        <li class="menu__item"><a href="index.html" class="menu__link menu__link--ativo">Início</a></li>
+        <li class="menu__item"><a href="catalogo.html" class="menu__link">Cursos</a></li>
+        <li class="menu__item"><a href="agendamento.html" class="menu__link">Agendamento</a></li>
+        <li class="menu__item"><a href="contato.html" class="menu__link">Contato</a></li>
+      </ul>
+    </nav>
+    <a href="agendamento.html" class="botao botao--principal cabecalho__botao">Agendar visita</a>
+  </header>
+
+  <main id="conteudo-principal">
+
+    <!-- SEÇÃO 1: DESTAQUE -->
+    <section id="destaque" class="secao secao--destaque">
+      <div class="destaque__texto">
+        <p class="chamada">Escola SENAI em Votuporanga</p>
+        <h1 class="titulo-principal">Aprender fazendo, <em class="titulo-principal__realce">construindo</em> o seu futuro.</h1>
+        <p class="destaque__descricao">Educação profissional ligada à indústria, com aulas práticas, laboratórios e professores que vivem o mercado de trabalho.</p>
+        <div class="destaque__botoes">
+          <a href="agendamento.html" class="botao botao--principal">Agendar visita</a>
+          <a href="catalogo.html" class="botao botao--contorno">Ver cursos</a>
+        </div>
+        <ul class="numeros">
+          <li class="numeros__item"><span class="numeros__valor">3</span><span class="numeros__rotulo">cursos neste projeto</span></li>
+          <li class="numeros__item"><span class="numeros__valor">3</span><span class="numeros__rotulo">professores</span></li>
+          <li class="numeros__item"><span class="numeros__valor">1</span><span class="numeros__rotulo">escola em Votuporanga</span></li>
+        </ul>
+      </div>
+      <figure class="destaque__figura">
+        <img src="img/escola-fachada.jpg" alt="Fachada da escola SENAI de Votuporanga" class="destaque__imagem">
+      </figure>
+    </section>
+
+    <!-- SEÇÃO 2: SOBRE A ESCOLA -->
+    <section id="sobre" class="secao">
+      <p class="chamada">Quem somos</p>
+      <h2 class="titulo-secao">Sobre a escola</h2>
+      <p class="secao__descricao">O SENAI (Serviço Nacional de Aprendizagem Industrial) forma pessoas para a indústria. Em Votuporanga, a escola fica na Rua Olga Loti Camargo, 3500, e atende estudantes que querem entrar ou crescer no mercado de trabalho.</p>
+      <div class="cartoes">
+        <article class="cartao">
+          <h3 class="cartao__titulo">Prática de verdade</h3>
+          <p class="cartao__texto">Laboratórios e oficinas para colocar a mão na massa desde cedo.</p>
+        </article>
+        <article class="cartao">
+          <h3 class="cartao__titulo">Ligação com a indústria</h3>
+          <p class="cartao__texto">Conteúdo pensado a partir do que as empresas realmente precisam.</p>
+        </article>
+        <article class="cartao">
+          <h3 class="cartao__titulo">Professores experientes</h3>
+          <p class="cartao__texto">Profissionais que ensinam o que fazem no dia a dia.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: CURSOS EM DESTAQUE -->
+    <section id="cursos-destaque" class="secao secao--clara">
+      <p class="chamada">Nossos cursos</p>
+      <h2 class="titulo-secao">Escolha o seu caminho</h2>
+      <div class="cartoes">
+        <article class="cartao">
+          <img src="img/curso-artistico.jpg" alt="Estudante em aula de arte" class="cartao__imagem">
+          <h3 class="cartao__titulo">Artístico</h3>
+          <p class="cartao__texto">Criatividade, desenho e design aplicados a projetos reais.</p>
+        </article>
+        <article class="cartao">
+          <img src="img/curso-iot.jpg" alt="Placa eletrônica com sensores" class="cartao__imagem">
+          <h3 class="cartao__titulo">TI 2.0 - IoT</h3>
+          <p class="cartao__texto">Internet das Coisas: sensores, automação e objetos conectados.</p>
+        </article>
+        <article class="cartao">
+          <img src="img/curso-ti.jpg" alt="Estudantes programando em computadores" class="cartao__imagem">
+          <h3 class="cartao__titulo">TI</h3>
+          <p class="cartao__texto">Programação, web, redes e suporte técnico.</p>
+        </article>
+      </div>
+      <a href="catalogo.html" class="botao botao--principal">Conhecer todos os cursos</a>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer id="rodape" class="rodape">
+    <div class="rodape__bloco">
+      <p class="rodape__titulo">SENAI Votuporanga</p>
+      <p class="rodape__texto">Rua Olga Loti Camargo, 3500 - Jardim Santos Dumont</p>
+      <p class="rodape__texto">CEP 15501-280 - Votuporanga/SP</p>
+      <p class="rodape__texto">Telefone: (17) 3426-8210</p>
+    </div>
+    <div class="rodape__bloco">
+      <p class="rodape__titulo">Navegação</p>
+      <a href="index.html" class="rodape__link">Início</a>
+      <a href="catalogo.html" class="rodape__link">Cursos</a>
+      <a href="agendamento.html" class="rodape__link">Agendamento</a>
+      <a href="contato.html" class="rodape__link">Contato</a>
+    </div>
+    <p class="rodape__direitos">Projeto escolar de estudo em HTML e CSS. Não é o site oficial do SENAI.</p>
+  </footer>
+
+</body>
+</html>

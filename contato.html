@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | SENAI Votuporanga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="pagina-contato">
+
+  <!-- CABEÇALHO -->
+  <header id="topo" class="cabecalho">
+    <a href="index.html" class="logo">SENAI <span class="logo__destaque">Votuporanga</span></a>
+    <nav id="menu-principal" class="menu">
+      <ul class="menu__lista">
+        <li class="menu__item"><a href="index.html" class="menu__link">Início</a></li>
+        <li class="menu__item"><a href="catalogo.html" class="menu__link">Cursos</a></li>
+        <li class="menu__item"><a href="agendamento.html" class="menu__link">Agendamento</a></li>
+        <li class="menu__item"><a href="contato.html" class="menu__link menu__link--ativo">Contato</a></li>
+      </ul>
+    </nav>
+    <a href="agendamento.html" class="botao botao--principal cabecalho__botao">Agendar visita</a>
+  </header>
+
+  <main id="conteudo-principal">
+
+    <!-- SEÇÃO 1: CANAIS DE CONTATO -->
+    <section id="canais-contato" class="secao">
+      <p class="chamada">Fale com a gente</p>
+      <h1 class="titulo-principal">Contato</h1>
+      <p class="secao__descricao">Venha nos visitar ou entre em contato para tirar suas dúvidas.</p>
+      <div class="cartoes">
+        <article class="cartao">
+          <h3 class="cartao__titulo">Endereço</h3>
+          <address class="cartao__texto">Rua Olga Loti Camargo, 3500<br>Jardim Santos Dumont<br>CEP 15501-280 - Votuporanga/SP</address>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=SENAI+Votuporanga+Rua+Olga+Loti+Camargo+3500" class="botao botao--contorno" target="_blank" rel="noopener">Ver no mapa</a>
+        </article>
+        <article class="cartao">
+          <h3 class="cartao__titulo">Telefone</h3>
+          <p class="cartao__texto">(17) 3426-8210</p>
+          <a href="tel:+551734268210" class="botao botao--contorno">Ligar agora</a>
+        </article>
+        <article class="cartao">
+          <h3 class="cartao__titulo">Site oficial</h3>
+          <p class="cartao__texto">Veja cursos e inscrições no portal do SENAI-SP.</p>
+          <a href="https://sp.senai.br" class="botao botao--contorno" target="_blank" rel="noopener">sp.senai.br</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: FORMULÁRIO DE MENSAGEM -->
+    <section id="enviar-mensagem" class="secao secao--clara">
+      <p class="chamada">Mensagem</p>
+      <h2 class="titulo-secao">Envie sua dúvida</h2>
+      <form id="form-contato" class="formulario" action="#" method="post">
+        <div class="formulario__campo">
+          <label for="contato-nome" class="formulario__rotulo">Nome</label>
+          <input type="text" id="contato-nome" name="nome" class="formulario__entrada" required>
+        </div>
+        <div class="formulario__campo">
+          <label for="contato-email" class="formulario__rotulo">E-mail</label>
+          <input type="email" id="contato-email" name="email" class="formulario__entrada" required>
+        </div>
+        <div class="formulario__campo">
+          <label for="contato-assunto" class="formulario__rotulo">Assunto</label>
+          <select id="contato-assunto" name="assunto" class="formulario__entrada">
+            <option value="cursos">Cursos</option>
+            <option value="matricula">Matrícula</option>
+            <option value="visita">Visita</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+        <div class="formulario__campo formulario__campo--largo">
+          <label for="contato-mensagem" class="formulario__rotulo">Mensagem</label>
+          <textarea id="contato-mensagem" name="mensagem" class="formulario__entrada" rows="5" required></textarea>
+        </div>
+        <button type="submit" id="botao-enviar" class="botao botao--principal">Enviar mensagem</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer id="rodape" class="rodape">
+    <div class="rodape__bloco">
+      <p class="rodape__titulo">SENAI Votuporanga</p>
+      <p class="rodape__texto">Rua Olga Loti Camargo, 3500 - Jardim Santos Dumont</p>
+      <p class="rodape__texto">CEP 15501-280 - Votuporanga/SP</p>
+      <p class="rodape__texto">Telefone: (17) 3426-8210</p>
+    </div>
+    <div class="rodape__bloco">
+      <p class="rodape__titulo">Navegação</p>
+      <a href="index.html" class="rodape__link">Início</a>
+      <a href="catalogo.html" class="rodape__link">Cursos</a>
+      <a href="agendamento.html" class="rodape__link">Agendamento</a>
+      <a href="contato.html" class="rodape__link">Contato</a>
+    </div>
+    <p class="rodape__direitos">Projeto escolar de estudo em HTML e CSS. Não é o site oficial do SENAI.</p>
+  </footer>
+
+</body>
+</html>
