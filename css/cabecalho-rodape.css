@@ -1,0 +1,116 @@
+/* ==========================================================
+   CABEÇALHO, MENU E RODAPÉ  (layout com FLEXBOX)
+   ========================================================== */
+
+/* ---------- Cabeçalho ---------- */
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-3);
+  padding: var(--espaco-2) var(--espaco-4);
+  background: var(--branco);
+  border-bottom: 3px solid var(--vermelho);
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--texto);
+}
+
+.logo__destaque {
+  color: var(--vermelho);
+}
+
+/* ---------- Menu ---------- */
+.menu__lista {
+  display: flex;
+  gap: var(--espaco-3);
+}
+
+.menu__link {
+  position: relative;
+  padding: 0.4rem 0;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--texto-suave);
+  transition: color var(--tempo) ease;
+}
+
+/* sublinhado que cresce ao passar o mouse */
+.menu__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--vermelho);
+  transition: width var(--tempo) ease;
+}
+
+.menu__link:hover,
+.menu__link--ativo {
+  color: var(--vermelho);
+}
+
+.menu__link:hover::after,
+.menu__link--ativo::after {
+  width: 100%;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--espaco-4);
+  padding: var(--espaco-4) var(--espaco-4) var(--espaco-3);
+  background: var(--vermelho-escuro);
+  color: var(--branco);
+}
+
+.rodape__bloco {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.rodape__titulo {
+  font-family: var(--fonte-titulo);
+  font-size: var(--texto-grande);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.rodape__texto {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.rodape__link {
+  font-size: 0.875rem;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity var(--tempo) ease, transform var(--tempo) ease;
+}
+
+.rodape__link:hover {
+  opacity: 1;
+  transform: translateX(0.3rem);
+}
+
+.rodape__direitos {
+  width: 100%;
+  padding-top: var(--espaco-2);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: var(--texto-pequeno);
+  text-align: center;
+  opacity: 0.8;
+}

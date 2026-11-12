@@ -1,0 +1,248 @@
+/* ==========================================================
+   SENAI Votuporanga - style.css (arquivo principal)
+   ========================================================== */
+
+/* 1) Arquivos separados por assunto (@import sempre no topo) */
+@import url("css/botoes.css");
+@import url("css/cabecalho-rodape.css");
+@import url("css/destaque.css");
+@import url("css/cartoes-grid.css");
+@import url("css/tabela-agenda.css");
+@import url("css/formularios.css");
+@import url("css/animacoes.css");
+@import url("css/responsivo.css");
+
+/* 2) Variáveis globais: paleta vermelho e branco */
+:root {
+  /* cores */
+  --vermelho: #d71920;
+  --vermelho-escuro: #a30f14;
+  --vermelho-claro: #fdeaea;
+  --branco: #ffffff;
+  --fundo-claro: #fbf4f4;
+  --texto: #2a1f20;
+  --texto-suave: #6b5a5b;
+  --borda: #ecd9d9;
+
+  /* fontes */
+  --fonte-texto: "Montserrat", Arial, sans-serif;
+  --fonte-titulo: "Montserrat", Arial, sans-serif;
+
+  /* tamanhos de texto (rem) */
+  --texto-pequeno: 0.8125rem;
+  --texto-normal: 1rem;
+  --texto-grande: 1.125rem;
+  --titulo-secao: 2.25rem;
+  --titulo-principal: 3.125rem;
+
+  /* espaçamentos (rem) */
+  --espaco-1: 0.5rem;
+  --espaco-2: 1rem;
+  --espaco-3: 1.5rem;
+  --espaco-4: 2.5rem;
+  --espaco-5: 5rem;
+
+  /* formas e efeitos */
+  --raio: 0.875rem;
+  --raio-botao: 3rem;
+  --sombra: 0 0.5rem 1.5rem rgba(163, 15, 20, 0.12);
+  --sombra-forte: 0 1rem 2.25rem rgba(163, 15, 20, 0.22);
+  --largura-maxima: 75rem;
+
+  /* animações */
+  --tempo: 0.3s;
+}
+
+/* 3) Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-texto);
+  font-size: var(--texto-normal);
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--branco);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, p, figure {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+/* 4) Estrutura geral das seções */
+.secao {
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: var(--espaco-5) var(--espaco-3);
+}
+
+/* Faixas de largura total com conteúdo alinhado ao centro */
+.secao--clara,
+.secao.secao--destaque {
+  max-width: none;
+  padding-left: max(var(--espaco-3), calc((100% - var(--largura-maxima)) / 2 + var(--espaco-3)));
+  padding-right: max(var(--espaco-3), calc((100% - var(--largura-maxima)) / 2 + var(--espaco-3)));
+}
+
+.secao--clara {
+  background: var(--fundo-claro);
+}
+
+/* 5) Tipografia geral */
+.chamada {
+  font-size: var(--texto-pequeno);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--vermelho);
+  margin-bottom: var(--espaco-1);
+}
+
+.titulo-principal {
+  font-family: var(--fonte-titulo);
+  font-size: var(--titulo-principal);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--texto);
+  margin-bottom: var(--espaco-2);
+}
+
+.titulo-principal__realce {
+  color: var(--vermelho);
+  font-style: normal;
+}
+
+.titulo-secao {
+  font-family: var(--fonte-titulo);
+  font-size: var(--titulo-secao);
+  font-weight: 700;
+  color: var(--texto);
+  margin-bottom: var(--espaco-2);
+}
+
+.secao__descricao {
+  max-width: 45rem;
+  font-size: var(--texto-grande);
+  color: var(--texto-suave);
+  margin-bottom: var(--espaco-4);
+}
+
+/* 6) Banner principal (Seção Destaque) */
+.secao.secao--destaque {
+  display: flex;
+  align-items: center;
+  min-height: 36rem;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(15, 20, 32, 0.92) 0%,
+      rgba(15, 20, 32, 0.76) 52%,
+      rgba(15, 20, 32, 0.22) 100%
+    ),
+    url("img/senaifachada.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--branco);
+}
+
+.secao--destaque .destaque__texto {
+  max-width: 39rem;
+}
+
+.secao--destaque .chamada {
+  display: inline-block;
+  background: var(--vermelho);
+  color: var(--branco);
+  padding: 0.35rem 0.85rem;
+  border-radius: 0.25rem;
+  letter-spacing: 0.14em;
+  margin-bottom: var(--espaco-2);
+}
+
+.secao--destaque .titulo-principal {
+  color: var(--branco);
+}
+
+.secao--destaque .titulo-principal__realce {
+  color: #ff4d54;
+}
+
+.secao--destaque .destaque__descricao {
+  font-size: var(--texto-grande);
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: var(--espaco-4);
+}
+
+.secao--destaque .destaque__botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-2);
+  margin-bottom: var(--espaco-4);
+}
+
+.secao--destaque .botao--contorno {
+  color: var(--branco);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.secao--destaque .botao--contorno:hover {
+  background: var(--branco);
+  border-color: var(--branco);
+  color: var(--texto);
+}
+
+.secao--destaque .numeros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-4);
+  padding-top: var(--espaco-3);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.secao--destaque .numeros__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.secao--destaque .numeros__valor {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--branco);
+}
+
+.secao--destaque .numeros__rotulo {
+  font-size: var(--texto-pequeno);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Espaçamento do botão final na seção de cursos */
+#cursos-destaque > .botao {
+  margin-top: var(--espaco-4);
+}

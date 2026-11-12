@@ -1,0 +1,68 @@
+/* ==========================================================
+   ANIMAÇÕES  (@keyframes + animation)
+   As transições (transition) ficam junto de cada componente.
+   ========================================================== */
+
+/* aparece subindo */
+@keyframes aparecer-subindo {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* entra pela lateral */
+@keyframes entrar-direita {
+  from {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* destaque suave no botão principal do menu */
+@keyframes pulsar {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(215, 25, 32, 0.45); }
+  50%      { box-shadow: 0 0 0 0.6rem rgba(215, 25, 32, 0); }
+}
+
+.destaque__texto,
+.secao > .chamada,
+.secao > .titulo-principal,
+.secao > .titulo-secao,
+.secao > .secao__descricao {
+  animation: aparecer-subindo 0.8s ease both;
+}
+
+.destaque__figura {
+  animation: entrar-direita 1s ease both;
+}
+
+.cartao {
+  animation: aparecer-subindo 0.7s ease both;
+}
+
+/* cartões entram um depois do outro */
+.cartao:nth-child(2) { animation-delay: 0.15s; }
+.cartao:nth-child(3) { animation-delay: 0.3s; }
+
+.cabecalho__botao {
+  animation: pulsar 2.5s ease-in-out infinite;
+}
+
+/* respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

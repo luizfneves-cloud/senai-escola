@@ -1,0 +1,55 @@
+/* ==========================================================
+   BOTÕES E LINKS DE AÇÃO
+   ========================================================== */
+.botao {
+  display: inline-block;
+  padding: 0.8rem 1.75rem;
+  font-family: var(--fonte-texto);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid var(--vermelho);
+  border-radius: var(--raio-botao);
+  cursor: pointer;
+  transition: background var(--tempo) ease,
+              color var(--tempo) ease,
+              transform var(--tempo) ease,
+              box-shadow var(--tempo) ease;
+}
+
+/* botão cheio (vermelho) */
+.botao--principal {
+  background: var(--vermelho);
+  color: var(--branco);
+}
+
+.botao--principal:hover {
+  background: var(--vermelho-escuro);
+  border-color: var(--vermelho-escuro);
+  transform: translateY(-0.2rem);
+  box-shadow: var(--sombra-forte);
+}
+
+/* botão só com contorno */
+.botao--contorno,
+.botao--secundario {
+  background: transparent;
+  color: var(--vermelho);
+}
+
+.botao--contorno:hover,
+.botao--secundario:hover {
+  background: var(--vermelho);
+  color: var(--branco);
+  transform: translateY(-0.2rem);
+}
+
+.botao:active {
+  transform: scale(0.97);
+}
+
+.botao:focus-visible {
+  outline: 3px solid var(--vermelho-escuro);
+  outline-offset: 3px;
+}

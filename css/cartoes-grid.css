@@ -1,0 +1,107 @@
+/* ==========================================================
+   CARTÕES DE CURSOS E PROFESSORES  (layout com GRID)
+   ========================================================== */
+.cartoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--espaco-3);
+  margin-bottom: var(--espaco-4);
+}
+
+.cartoes:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Cartão base ---------- */
+.cartao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-1);
+  padding: var(--espaco-3);
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-top: 4px solid var(--vermelho);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  transition: transform var(--tempo) ease, box-shadow var(--tempo) ease;
+}
+
+.cartao:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: var(--sombra-forte);
+}
+
+.cartao__imagem {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: calc(var(--raio) - 0.25rem);
+  background: var(--vermelho-claro);
+  margin-bottom: var(--espaco-1);
+}
+
+.cartao__titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.375rem;
+  color: var(--texto);
+}
+
+.cartao__texto {
+  font-size: 0.9375rem;
+  font-style: normal; /* tira o itálico do <address> */
+  color: var(--texto-suave);
+}
+
+/* o botão do cartão sempre fica no final */
+.cartao .botao {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ---------- Cartão de curso ---------- */
+.cartao__detalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: var(--espaco-1) 0 var(--espaco-2);
+}
+
+.cartao__detalhe {
+  padding-left: 1.1rem;
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.cartao__detalhe::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--vermelho);
+}
+
+/* ---------- Cartão de professor ---------- */
+.cartao--professor {
+  text-align: center;
+  align-items: center;
+}
+
+.cartao__imagem--retrato {
+  width: 9rem;
+  height: 9rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 4px solid var(--vermelho-claro);
+}
+
+.cartao__funcao {
+  font-size: var(--texto-pequeno);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--vermelho);
+}

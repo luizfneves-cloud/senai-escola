@@ -1,0 +1,105 @@
+/* ==========================================================
+   FORMULÁRIOS  (campos organizados com GRID)
+   ========================================================== */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-3);
+  max-width: 50rem;
+  padding: var(--espaco-4);
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-top: 4px solid var(--vermelho);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+/* grupo de campos (fieldset) em duas colunas */
+.formulario__grupo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--espaco-2) var(--espaco-3);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.formulario__legenda {
+  grid-column: 1 / -1;
+  padding: 0;
+  margin-bottom: var(--espaco-1);
+  font-family: var(--fonte-titulo);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--vermelho);
+}
+
+.formulario__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+/* o formulário de contato não tem fieldset: usa grid também */
+#form-contato {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--espaco-2) var(--espaco-3);
+}
+
+.formulario__campo--largo,
+#form-contato .botao {
+  grid-column: 1 / -1;
+}
+
+#form-contato .botao {
+  justify-self: start;
+}
+
+.formulario__rotulo {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.formulario__entrada {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--fonte-texto);
+  font-size: var(--texto-normal);
+  color: var(--texto);
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 0.625rem;
+  transition: border-color var(--tempo) ease, box-shadow var(--tempo) ease;
+}
+
+.formulario__entrada:hover {
+  border-color: var(--vermelho);
+}
+
+.formulario__entrada:focus {
+  outline: none;
+  border-color: var(--vermelho);
+  box-shadow: 0 0 0 0.25rem rgba(215, 25, 32, 0.18);
+}
+
+textarea.formulario__entrada {
+  resize: vertical;
+}
+
+/* checkbox com texto ao lado */
+.formulario__campo--check {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--espaco-1);
+}
+
+.formulario__campo--check input {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--vermelho);
+}
+
+.formulario .botao {
+  align-self: flex-start;
+}

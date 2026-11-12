@@ -1,0 +1,73 @@
+/* ==========================================================
+   SEÇÃO DE DESTAQUE (HERO) E NÚMEROS  (layout com FLEXBOX)
+   ========================================================== */
+.secao--destaque {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-4);
+}
+
+.destaque__texto {
+  flex: 1 1 50%;
+}
+
+.destaque__descricao {
+  max-width: 34rem;
+  font-size: var(--texto-grande);
+  color: var(--texto-suave);
+  margin-bottom: var(--espaco-3);
+}
+
+.destaque__botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-2);
+  margin-bottom: var(--espaco-4);
+}
+
+/* ---------- Imagem em formato de arco ---------- */
+.destaque__figura {
+  flex: 1 1 40%;
+  max-width: 28rem;
+  overflow: hidden;
+  border-radius: 14rem 14rem var(--raio) var(--raio);
+  background: var(--vermelho-claro);
+  box-shadow: var(--sombra-forte);
+}
+
+.destaque__imagem {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.destaque__figura:hover .destaque__imagem {
+  transform: scale(1.06);
+}
+
+/* ---------- Números em destaque ---------- */
+.numeros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-4);
+}
+
+.numeros__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.numeros__valor {
+  font-family: var(--fonte-titulo);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--vermelho);
+  line-height: 1.1;
+}
+
+.numeros__rotulo {
+  font-size: var(--texto-pequeno);
+  color: var(--texto-suave);
+}

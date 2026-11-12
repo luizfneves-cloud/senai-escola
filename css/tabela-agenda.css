@@ -1,0 +1,70 @@
+/* ==========================================================
+   AGENDA DA SEMANA  (estilos de TABELA)
+   ========================================================== */
+.agenda {
+  overflow-x: auto; /* rolagem lateral no celular */
+}
+
+.agenda__tabela {
+  width: 100%;
+  min-width: 38rem;
+  border-collapse: separate;
+  border-spacing: 0.5rem;
+}
+
+.agenda__cabecalho {
+  padding: var(--espaco-1);
+  font-size: var(--texto-pequeno);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--vermelho);
+}
+
+.agenda__hora {
+  padding: 0.75rem var(--espaco-1);
+  font-weight: 700;
+  color: var(--branco);
+  background: var(--vermelho-escuro);
+  border-radius: 0.625rem;
+}
+
+.agenda__celula {
+  padding: 0;
+}
+
+/* ---------- Botões da agenda ---------- */
+.agenda__botao {
+  width: 100%;
+  padding: 0.75rem var(--espaco-1);
+  font-family: var(--fonte-texto);
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 0.625rem;
+  transition: background var(--tempo) ease,
+              color var(--tempo) ease,
+              transform var(--tempo) ease;
+}
+
+.agenda__botao--livre {
+  color: var(--vermelho);
+  background: var(--vermelho-claro);
+  border: 1px solid var(--vermelho);
+  cursor: pointer;
+}
+
+.agenda__botao--livre:hover,
+.agenda__botao--livre:focus {
+  color: var(--branco);
+  background: var(--vermelho);
+  transform: scale(1.04);
+  outline: none;
+}
+
+.agenda__botao--ocupado {
+  color: #a79a9b;
+  background: #f1eaea;
+  border: 1px solid transparent;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}

@@ -1,0 +1,52 @@
+/* ==========================================================
+   RESPONSIVO  (tablet e celular)
+   ========================================================== */
+
+/* Tablet */
+@media (max-width: 62rem) {
+  :root {
+    --titulo-principal: 2.5rem;
+    --titulo-secao: 1.875rem;
+  }
+
+  .cabecalho {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: var(--espaco-2);
+  }
+
+  .secao--destaque {
+    flex-direction: column-reverse;
+  }
+
+  .destaque__figura {
+    width: 100%;
+  }
+}
+
+/* Celular */
+@media (max-width: 40rem) {
+  :root {
+    --titulo-principal: 2rem;
+    --titulo-secao: 1.5rem;
+    --espaco-5: 3rem;
+  }
+
+  .menu__lista {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--espaco-2);
+  }
+
+  .cabecalho__botao {
+    width: 100%;
+  }
+
+  .formulario {
+    padding: var(--espaco-3);
+  }
+
+  .rodape {
+    flex-direction: column;
+  }
+}
